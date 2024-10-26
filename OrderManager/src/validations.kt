@@ -4,16 +4,15 @@ fun ValidarString(input:String):Boolean{
 
 
 fun ValidarNumero(input: String): Boolean {
-    // Verificar si el input está vacío
     if (input.isBlank()) {
-        return false // Retornar false si está vacío
+        return false
     }
 
     return try {
         val number = input.toInt()
-        number > 0 // Retornar true solo si el número es positivo
+        number > 0
     } catch (e: NumberFormatException) {
-        false // Retornar false si no se puede convertir a número
+        false
     }
 }
 

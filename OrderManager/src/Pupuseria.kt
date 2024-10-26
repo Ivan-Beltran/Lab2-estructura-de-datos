@@ -72,8 +72,8 @@ class Pupuseria(
 
     fun despacharOrden() {
         if (ordenPendiente.isNotEmpty()) {
-            val ordenADespachar = ordenPendiente.poll() // Retira y obtiene la primera orden de la cola
-            ordenDespachada.push(ordenADespachar) // Agrega la orden a la pila de órdenes despachadas
+            val ordenADespachar = ordenPendiente.poll()
+            ordenDespachada.push(ordenADespachar) 
             println("Orden de ${ordenADespachar.cliente} ha sido despachada.\n\n")
         } else {
             println("No hay órdenes pendientes para despachar.\n")

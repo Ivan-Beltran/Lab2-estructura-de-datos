@@ -1,6 +1,6 @@
 import java.util.*
 
-fun mostrarOpciones() {
+fun mostrarOpciones() { //creando funcion para mostrar el menu de opciones
     println("Bienvenido a la Pupusería \"El Comalito\"")
     println("Seleccione una opción:")
     println("1. Registrar una nueva orden")
@@ -15,7 +15,7 @@ fun main() {
     val menuPupusas = listOf("revueltas", "frijol con queso", "queso")
     val ordenesPendientes: Queue<Orden> = LinkedList()
     val ordenesDespachadas: Stack<Orden> = Stack()
-    val pupuseria = Pupuseria(menuPupusas, ordenesPendientes, ordenesDespachadas)
+    val pupuseria = Pupuseria(menuPupusas, ordenesPendientes, ordenesDespachadas) // clase con los metodos de una pupuseria
 
     while (true) {
         mostrarOpciones()
@@ -27,10 +27,10 @@ fun main() {
         }
 
         when (opcionSeleccionada.toInt()) {
-            1 -> pupuseria.agregarOrden() // Agregar una nueva orden
-            2 -> pupuseria.verOrdenesPendientes() // Ver órdenes pendientes
-            3 -> pupuseria.despacharOrden() // Despachar la primera orden
-            4 -> pupuseria.verOrdenesDespachadas() // Ver órdenes despachadas
+            1 -> pupuseria.agregarOrden()
+            2 -> pupuseria.verOrdenesPendientes()
+            3 -> pupuseria.despacharOrden()
+            4 -> pupuseria.verOrdenesDespachadas()
             5 -> {
                 println("Saliendo del programa.")
                 break
